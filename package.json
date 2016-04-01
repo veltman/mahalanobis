@@ -1,0 +1,15 @@
+{
+  "name": "mahalanobis",
+  "version": "0.1.0",
+  "description": "Calculate Mahalabonis distances from an array of multivariate data",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "mahalanobis",
+    "outliers"
+  ],
+  "author": "Noah Veltman (@veltman)",
+  "license": "MIT"
+}
