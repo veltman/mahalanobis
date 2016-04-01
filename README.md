@@ -1,6 +1,6 @@
 # Mahalanobis
 
-Calculate the [Mahalanobis distances]() from an array of multivariate data.
+Calculate the [Mahalanobis distances](https://en.wikipedia.org/wiki/Mahalanobis_distance) from an array of multivariate data. Useful for calculating "outlierness" of data points across dimensions in certain situations.
 
 ### Installation
 
