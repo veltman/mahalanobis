@@ -1,5 +1,7 @@
 # Mahalanobis
 
+[![Build Status](https://travis-ci.org/veltman/mahalanobis.svg?branch=master)](https://travis-ci.org/veltman/mahalanobis)
+
 Calculate the [Mahalanobis distances](https://en.wikipedia.org/wiki/Mahalanobis_distance) from an array of multivariate data. Useful for calculating "outlierness" of data points across dimensions in certain situations.
 
 ### Installation
