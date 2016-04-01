@@ -11,5 +11,9 @@
     "outliers"
   ],
   "author": "Noah Veltman (@veltman)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "compute-covariance": "^1.0.1",
+    "mathjs": "^3.1.3"
+  }
 }
