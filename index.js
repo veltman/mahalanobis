@@ -17,12 +17,17 @@ function mahalanobis(data) {
     return [];
   }
 
-  var columns = math.transpose(data);
+  var columns = transpose(data);
 
-  var invertedCovariance = math.inv(cov(columns));
+  var covariance = cov(columns);
+
+  console.log(covariance);
+  var invertedCovariance = invert(covariance);
+  console.log(invertedCovariance);
+  console.log("");
 
   var means = columns.map(function(column){
-    return math.mean(column);
+    return mean(column);
   });
 
   var deltas = data.map(function(row){
@@ -45,6 +50,30 @@ function mahalanobis(data) {
 
   });
 
+}
+
+function invert(matrix) {
+
+  return math.inv(matrix);
+
+}
+
+function transpose(matrix) {
+
+  return matrix[0].map(function(d,i){
+
+    return matrix.map(function(row){
+      return row[i];
+    });
+
+  });
+
+}
+
+function mean(arr) {
+  return arr.reduce(function(a,b){
+    return a + b;
+  }) / arr.length;
 }
 
 function isNumeric(n) {
