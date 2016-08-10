@@ -4,6 +4,7 @@
   "description": "Calculate Mahalabonis distances from an array of multivariate data",
   "main": "index.js",
   "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n mahalanobis -o build/mahalanobis.js -- index.js",
     "test": "node test/test.js",
     "build": "browserify -s mahalanobis index.js > mahalanobis.js"
   },
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/veltman/mahalanobis/issues"
   },
-  "homepage": "https://github.com/veltman/mahalanobis"
+  "homepage": "https://github.com/veltman/mahalanobis",
+  "devDependencies": {
+    "rollup": "^0.34.7"
+  }
 }

@@ -1,5 +1,5 @@
 var assert = require("assert"),
-    mahalanobis = require("../");
+    mahalanobis = require("../build/mahalanobis.js");
 
 var wrapper = function(d) {
   return function() {
