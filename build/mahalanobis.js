@@ -208,8 +208,6 @@
 
   }
 
-  module.exports = mahalanobis;
-
   return mahalanobis;
 
 }));

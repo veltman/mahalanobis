@@ -44,5 +44,3 @@ export default function mahalanobis(data) {
   });
 
 }
-
-module.exports = mahalanobis;
