@@ -17,6 +17,14 @@ assert.throws(wrapper("string"));
 assert.throws(wrapper([1,2,3]));
 assert.throws(wrapper([[1,2],[1,2,3]]));
 
+// Uncomputable
+assert.throws(wrapper(test2D.slice(0, 1)));
+assert.throws(wrapper(test2D.slice(0, 2)));
+assert.throws(wrapper(test3D.slice(0, 2)));
+assert.throws(wrapper(test3D.slice(0, 3)));
+assert.throws(wrapper([[13,19,10,2,2],[3,13,7,10,17],[12,7,6,9,7],[12,2,19,18,19],[13,9,0,5,12]]));
+assert.throws(wrapper([[1]]));
+
 // Empty data
 assert.deepEqual(mahalanobis([]),[]);
 

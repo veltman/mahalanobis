@@ -17,8 +17,8 @@ export default function mahalanobis(data) {
     return [];
   }
 
-  if (data.length === 1) {
-    return data[0].map(function(d){ return 0; });
+  if (data.length <= data[0].length) {
+    throw new RangeError("Data must have more observations (rows) than features (columns) to compute covariance. Currently has " + data.length + " observations, " + data[0].length + " features.");
   }
 
   var columns = transpose(data),
