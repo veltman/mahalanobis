@@ -17,6 +17,10 @@ export default function mahalanobis(data) {
     return [];
   }
 
+  if (data.length === 1) {
+    return data[0].map(function(d){ return 0; });
+  }
+
   var columns = transpose(data),
       means = columns.map(mean),
       invertedCovariance = invert(cov(columns, means));
