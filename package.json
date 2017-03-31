@@ -1,6 +1,6 @@
 {
   "name": "mahalanobis",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Calculate Mahalabonis distances from an array of multivariate data",
   "main": "build/mahalanobis.js",
   "scripts": {
