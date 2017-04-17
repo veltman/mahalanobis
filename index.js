@@ -25,8 +25,7 @@ export default function mahalanobis(data) {
       means = columns.map(mean),
       invertedCovariance = invert(cov(columns, means));
 
-  return data.map(function(row, i){
-
+  function distance(row) {
     var deltas = row.map(function(d, i){
       return d - means[i];
     });
@@ -40,7 +39,13 @@ export default function mahalanobis(data) {
         deltas
       )
     );
+  }
 
-  });
+  return {
+    distance: distance,
+    all: function() {
+      return data.map(distance);
+    }
+  };
 
 }
