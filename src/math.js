@@ -3,7 +3,7 @@ export function mean(arr) {
 }
 
 export function sum(arr) {
-  return arr.reduce(function(a, b){
+  return arr.reduce(function(a, b) {
     return a + b;
   });
 }

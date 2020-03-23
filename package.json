@@ -1,19 +1,19 @@
 {
   "name": "mahalanobis",
-  "version": "0.3.3",
+  "version": "1.0.0",
   "description": "Calculate Mahalabonis distances from an array of multivariate data",
   "main": "build/mahalanobis.js",
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -f umd -n mahalanobis -o build/mahalanobis.js -- index.js",
     "prepublish": "uglifyjs build/mahalanobis.js -o build/mahalanobis.min.js",
-    "test": "node test/test.js",
-    "watch": "rollup -w -f umd -n mahalanobis -o build/mahalanobis.js -- index.js"
+    "test": "node test/test.js"
   },
   "keywords": [
     "mahalanobis",
     "outliers"
   ],
   "jsnext:main": "index",
+  "module": "index",
   "author": "Noah Veltman (@veltman)",
   "license": "MIT",
   "dependencies": {},
@@ -29,8 +29,7 @@
   },
   "homepage": "https://github.com/veltman/mahalanobis",
   "devDependencies": {
-    "rollup": "^0.34.7",
-    "rollup-watch": "^2.5.0",
+    "rollup": "^2.1.0",
     "uglify-js": "^2.7.0"
   }
 }

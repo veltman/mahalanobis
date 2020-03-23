@@ -12,7 +12,9 @@ npm install mahalanobis
 
 ### Usage
 
-Returns an array of the same length as the input array with the Mahalanobis distance for each element.  The input array should be an array of rows, like:
+`mahalanobis(points)` returns an object with two methods: `.distance(point)` to get the Mahalanobis distance of one point vs. the distribution, and `.all()` to return an array of Mahalanobis distances for all the input points.
+
+The input array should be an array of rows, like:
 
 ```
 [
@@ -27,24 +29,52 @@ Returns an array of the same length as the input array with the Mahalanobis dist
 var mahalanobis = require("mahalanobis");
 
 var data = [
-  [1,2,3],
-  [1,5,6],
-  [7,3,4],
-  [2,3,0],
-  [9,0,-5]
+  [1, 2, 3],
+  [1, 5, 6],
+  [7, 3, 4],
+  [2, 3, 0],
+  [9, 0, -5]
 ];
 
-var distances = mahalanobis(data);
+var m = mahalanobis(data);
 
-distances.forEach(function(distance,i){
-  console.log("The distance for row " + i + " is " + distance);
+data.forEach(function(point, i) {
+  console.log("The distance for row " + i + " is " + m.distance(point));
 });
-```
 
-```
+/*
 The distance for row 0 is 1.78834390789133
 The distance for row 1 is 1.3487167047236224
 The distance for row 2 is 1.5829207125424334
 The distance for row 3 is 1.367039530625441
 The distance for row 4 is 1.6150400171571428
+*/
+```
+
+You can also use the `.all()` method to directly return an array of distances for all the points in the input array.
+
+```js
+var mahalanobis = require("mahalanobis");
+
+var data = [
+  [1, 2, 3],
+  [1, 5, 6],
+  [7, 3, 4],
+  [2, 3, 0],
+  [9, 0, -5]
+];
+
+var distances = mahalanobis(data).all();
+
+distances.forEach(function(distance, i) {
+  console.log("The distance for row " + i + " is " + distance);
+});
+
+/*
+The distance for row 0 is 1.78834390789133
+The distance for row 1 is 1.3487167047236224
+The distance for row 2 is 1.5829207125424334
+The distance for row 3 is 1.367039530625441
+The distance for row 4 is 1.6150400171571428
+*/
 ```
