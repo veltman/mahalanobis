@@ -16,13 +16,13 @@ npm install mahalanobis
 
 The input array should be an array of rows, like:
 
-```
+```js
 [
-  [1,2,3],
-  [1,5,6],
-  [7,9,10],
-  [9,0,-5]
-]
+  [1, 2, 3],
+  [1, 5, 6],
+  [7, 9, 10],
+  [9, 0, -5]
+];
 ```
 
 ```js
